@@ -18,7 +18,7 @@
     <div id="formContent">
         <div class="registrationTitle" >Rejestracja</div>
 
-        <form th:action="@{/register}" th:object="${user}" method="post">
+        <form th:action="@{/registration}" th:object="${user}" method="post">
 
             <p class="error" th:text="${commonError}"></p>
             <input id="username" type="text" th:field="*{username}" class="myTextButton" placeholder="email"/>
