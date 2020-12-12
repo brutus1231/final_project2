@@ -47,6 +47,6 @@ public class User {
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "ROLE_ID") }
     )
-    private List<Role> roles;
+    private List<UserRole> roles;
 
 }

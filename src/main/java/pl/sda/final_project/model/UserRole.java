@@ -9,14 +9,14 @@ import javax.persistence.*;
 @Table(name = "ROLE")
 @Data
 @NoArgsConstructor
-public class Role {
+public class UserRole {
 
     @Id
     @GeneratedValue
     @Column(name = "ROLE_ID")
     private Long id;
 
-    @Column
+    @Column(name = "name")
     @Enumerated(EnumType.STRING)
     private RoleType type;
 }
