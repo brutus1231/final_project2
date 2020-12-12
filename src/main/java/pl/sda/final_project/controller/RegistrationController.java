@@ -1,15 +1,19 @@
 package pl.sda.final_project.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.sda.final_project.dto.UserDto;
+import pl.sda.final_project.service.UserService;
 
 @Controller
+@RequiredArgsConstructor
 public class RegistrationController {
 
+    private final UserService userService;
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -19,6 +23,7 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public String saveUser(@ModelAttribute("user") UserDto user) {
+        userService.save(user);
         return "registration";
     }
 }
