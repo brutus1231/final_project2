@@ -18,4 +18,5 @@ public class UserDto {
     private String address;
     private Date createDate;
     private AccountStatus status;
+    private byte[] avatar;
 }
