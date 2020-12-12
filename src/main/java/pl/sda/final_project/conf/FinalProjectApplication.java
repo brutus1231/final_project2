@@ -9,8 +9,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan("pl.sda")
-@EntityScan("pl.sda.model")
-@EnableJpaRepositories("pl.sda.repository")
+@EntityScan("pl.sda.final_project.model")
+@EnableJpaRepositories("pl.sda.final_project.repository")
 @Import(SecurityConfig.class)
 public class FinalProjectApplication {
 
