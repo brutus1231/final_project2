@@ -11,6 +11,7 @@ import java.util.List;
 @Table(name = "USER")
 @Data
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User {
 
     @Id
@@ -41,7 +42,7 @@ public class User {
     @Lob
     private byte[] avatar;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany
     @JoinTable(
             name = "user_role",
             joinColumns = { @JoinColumn(name = "USER_ID") },

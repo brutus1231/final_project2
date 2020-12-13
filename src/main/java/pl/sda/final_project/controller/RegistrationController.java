@@ -29,6 +29,6 @@ public class RegistrationController {
         }
 
         userService.save(user);
-        return "index";
+        return "login";
     }
 }
