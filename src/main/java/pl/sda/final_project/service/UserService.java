@@ -28,4 +28,16 @@ public class UserService {
         User savedUser = userRepository.save(user);
         return savedUser.getId();
     }
+
+    public void update(UserDto userDto){
+        Optional<User> optionalUser = userRepository.findById(userDto.getId());
+        if (optionalUser.isPresent()) {
+            User user = userAssembler.toEntity(userDto);
+            user.setId(userDto.getId());
+//            User user = optionalUser.get();
+//            user.setCity(userDto.getCity());
+//            user.setAddress(userDto.getAddress());
+            userRepository.save(user);
+        }
+    }
 }

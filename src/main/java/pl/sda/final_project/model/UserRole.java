@@ -19,4 +19,5 @@ public class UserRole {
     @Column(name = "name")
     @Enumerated(EnumType.STRING)
     private RoleType type;
+
 }
