@@ -1,8 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <div th:fragment="header-css">
-        <link rel="stylesheet" th:href="@{/css/header.css}"
-              href="../../css/header.css" />
+        <link rel="stylesheet" th:href="@{/css/header.css}" href="/css/header.css" />
     </div>
 </head>
 <body>
@@ -18,7 +17,7 @@
 
             <div class="navbar-header" sec:authorize="isAuthenticated()">
                 <a class="navbar-brand" th:href="@{/userPanel}">Panel użytkownika</a>
-                <a class="navbar-brand" th:href="@{/event}">Dodaj wydarzemoe</a>
+                <a class="navbar-brand" th:href="@{/event}">Dodaj wydarzenie</a>
                 <span  th:text="${#authentication.name}"></span>
                 <a class="navbar-brand" th:href="@{/logout}">Wyloguj</a>
             </div>
