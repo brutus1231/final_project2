@@ -33,7 +33,6 @@ public class UserService {
         Optional<User> optionalUser = userRepository.findById(userDto.getId());
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
-//            user.setId(userDto.getId());
             user.setCity(userDto.getCity());
             user.setAddress(userDto.getAddress());
             userRepository.save(user);
@@ -43,4 +42,6 @@ public class UserService {
     public void delete(Long userId) {
         userRepository.deleteById(userId);
     }
+
+    
 }
